@@ -8,5 +8,12 @@
 </head>
 <body>
   <h1>My Skills</h1>
+  <ul>
+    <%= skills.forEach(skill => { %> 
+      <li>
+        <%= skill.text %> 
+      </li>
+    <% }) %> 
+  </ul>
 </body>
 </html>
