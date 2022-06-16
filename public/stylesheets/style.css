@@ -33,6 +33,7 @@ a:hover {
 }
 li {
   color: #AFE0CE;
+  list-style: none;
 }
 button {
   background-color: #DE7C5A;
@@ -42,4 +43,9 @@ button {
 
 input {
   border: 1px solid #570000;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
 }
