@@ -35,6 +35,11 @@ li {
   color: #AFE0CE;
   list-style: none;
 }
+
+#links {
+  color: #AFE0CE;
+}
+
 button {
   background-color: #DE7C5A;
   color: #280000;
