@@ -2,19 +2,34 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
+  align-items: center;
+  justify-content: center;
+  display: grid;
 }
 
 h1 {
-  color: plum;
-  text-shadow: 1px 1px 1px yellowgreen;
+  color: #DE7C5A;
+  text-shadow: 1px 1px 1px #AFE0CE;
   font-weight: bold;
 }
 
 a {
-  color: #00B7FF;
+  color: #C5D86D;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
+}
+li {
+  color: #AFE0CE;
+}
+button {
+  background-color: #DE7C5A;
+  color: #280000;
+  border: 1px solid #570000;
+}
+
+input {
+  border: 1px solid #570000;
 }
