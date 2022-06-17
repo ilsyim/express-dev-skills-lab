@@ -9,6 +9,8 @@ router.get('/new', fruitsCtrl.new)
 
 router.get('/:id', fruitsCtrl.show)
 
+router.get('/:id/edit', fruitsCtrl.edit)
+
 router.post('/', fruitsCtrl.create)
 
 router.delete('/:id', fruitsCtrl.delete)

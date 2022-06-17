@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <title>Fruits</title>
+  <title>Document</title>
 </head>
 <body>
-  <h1>Fruits</h1>
-  <a href="/fruits/<%= fruit._id %>/edit">Edit</a>
-  <h2>Fruit #<%= fruit._id %></h2>
-  <h3><%= fruit.text %></h3>
-  <a href="/fruits">Go Back</a>
+  <h1>Edit Fruit</h1>
+  <form action="" method="POST" autocomplete="off">
+    <input value="<%= fruit.text %>" type="text" name="text">
+    <button type="submit">Save Fruit</button>
+  </form><br>
+  <a href="/fruits/<%= fruit._id%>">Cancel</a>
 </body>
 </html>

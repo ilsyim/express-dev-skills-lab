@@ -55,10 +55,24 @@ function deleteFruit(req, res) {
   })
 }
 
+function edit(req, res) {
+  Fruit.findById(req.params.id)
+  .then(fruit => {
+    res.render('fruits/edit', {
+      fruit: fruit
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/fruits')
+  })
+}
+
 export {
   index,
   newFruit as new,
   create,
   show,
-  deleteFruit as delete
+  deleteFruit as delete,
+  edit
 }
