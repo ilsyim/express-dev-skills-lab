@@ -68,11 +68,23 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(fruit => {
+    res.redirect(`/fruits/${fruit._id}`)
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/fruits')
+  })
+}
+
 export {
   index,
   newFruit as new,
   create,
   show,
   deleteFruit as delete,
-  edit
+  edit,
+  update
 }

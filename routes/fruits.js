@@ -15,6 +15,9 @@ router.post('/', fruitsCtrl.create)
 
 router.delete('/:id', fruitsCtrl.delete)
 
+router.put('/:id', fruitsCtrl.update)
+
+
 export {
   router
 }

@@ -67,6 +67,17 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Skill.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(skill => {
+    res.redirect(`/skills/${skill._id}`)
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
+
 export {
   index,
   newSkill as new,
@@ -74,4 +85,5 @@ export {
   show,
   deleteSkill as delete,
   edit,
+  update
 }
