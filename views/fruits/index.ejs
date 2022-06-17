@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <title><%= title %></title>
+  <title>Fruit List</title>
 </head>
 <body>
-  <h1>My interests: </h1>
-  <a href="/skills"> Skills List</a>
-  <a href="/fruits"> Best Fruits</a>
+  <h1>Best Fruits</h1>
+  <ul>
+    <% fruits.forEach(fruit => { %>
+      <li>
+				<%= fruit.text %> 
+			</li>
+    <% }) %>
+  </ul>
 </body>
 </html>
