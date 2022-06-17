@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Fruit List</title>
 </head>
 <body>
-  <h1>Best Fruits</h1>
+  <h1>Best Fruits as of <%= time %></h1>
   <ul>
     <% fruits.forEach(fruit => { %>
       <li>
-        <a href="/fruits/<%= fruit._id %>"><%= fruit.text %></a>
+          <form action="/fruits/<%= fruit._id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">X</button>
+          </form>
+        <a id="links" href="/fruits/<%= fruit._id %>"><%= fruit.text %></a>
 			</li>
     <% }) %>
   </ul>

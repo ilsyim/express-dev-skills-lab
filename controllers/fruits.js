@@ -5,7 +5,8 @@ function index(req, res) {
   Fruit.find({})
   .then( fruits => {
     res.render('fruits/index', {
-      fruits: fruits
+      fruits: fruits,
+      time: req.time
     })
   })
   .catch(error => {
@@ -43,9 +44,21 @@ function show(req, res) {
   })
 }
 
+function deleteFruit(req, res) {
+  Fruit.findByIdAndDelete(req.params.id)
+  .then(fruit => {
+    res.redirect('/fruits')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/fruits')
+  })
+}
+
 export {
   index,
   newFruit as new,
   create,
   show,
+  deleteFruit as delete
 }
