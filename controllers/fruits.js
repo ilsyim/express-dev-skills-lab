@@ -15,15 +15,27 @@ function index(req, res) {
 }
 
 function newFruit(req, res) {
-  res.render
-  ('fruits/new')
+  res.render('fruits/new')
 }
 
 function create(req, res) {
-  console.log(req.body)
   Fruit.create(req.body)
   .then(fruit => {
+    console.log(fruit)
     res.redirect('/fruits')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/fruits')
+  })
+}
+
+function show(req, res) {
+  Fruit.findById(req.params.id)
+  .then(fruit => {
+    res.render('fruits/show', {
+      fruit: fruit
+    })
   })
   .catch(error => {
     console.log(error)
@@ -35,4 +47,5 @@ export {
   index,
   newFruit as new,
   create,
+  show,
 }
