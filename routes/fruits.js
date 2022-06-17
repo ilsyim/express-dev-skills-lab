@@ -5,6 +5,8 @@ const router = Router()
 
 router.get('/', fruitsCtrl.index)
 
+router.get('/new', fruitsCtrl.new)
+
 export {
   router
 }

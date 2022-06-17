@@ -14,6 +14,12 @@ function index(req, res) {
   })
 }
 
+function newFruit(req, res) {
+  res.render
+  ('fruits/new')
+}
+
 export {
-  index
+  index,
+  newFruit as new,
 }
