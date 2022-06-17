@@ -7,6 +7,8 @@ router.get('/', fruitsCtrl.index)
 
 router.get('/new', fruitsCtrl.new)
 
+router.post('/', fruitsCtrl.create)
+
 export {
   router
 }

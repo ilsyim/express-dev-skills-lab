@@ -19,7 +19,20 @@ function newFruit(req, res) {
   ('fruits/new')
 }
 
+function create(req, res) {
+  console.log(req.body)
+  Fruit.create(req.body)
+  .then(fruit => {
+    res.redirect('/fruits')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/fruits')
+  })
+}
+
 export {
   index,
   newFruit as new,
+  create,
 }
